@@ -8,9 +8,11 @@
 
 ---
 
-### v20180909
+### v20181212
 
-* VPN on Linux/MacOS/Windows, maybe you can use it for games [wiki](https://github.com/txthinking/brook/wiki/How-to-run-VPN-on-Linux,-MacOS-and-Windows%3F)
+* Uninstall/Delete the old client on MacOS or Windows
+* On MacOS, you need to System Preferences -> Security & Privacy, click Open Anyway, when you open Brook
+* No longer support the snap package
 
 ---
 
@@ -41,25 +43,25 @@ Brook's goal is to keep it simple, stupid and not detectable.
 
 | Download | Server/Client | OS | Arch | Remark |
 | --- | --- | --- | --- | --- |
-| [brook](https://github.com/txthinking/brook/releases/download/v20180909/brook) | Server & Client | Linux | amd64 | CLI |
-| [brook_linux_386](https://github.com/txthinking/brook/releases/download/v20180909/brook_linux_386) | Server & Client | Linux | 386 | CLI |
-| [brook_linux_arm64](https://github.com/txthinking/brook/releases/download/v20180909/brook_linux_arm64) | Server & Client | Linux | arm64 | CLI |
-| [brook_linux_arm5](https://github.com/txthinking/brook/releases/download/v20180909/brook_linux_arm5) | Server & Client | Linux | arm5 | CLI |
-| [brook_linux_arm6](https://github.com/txthinking/brook/releases/download/v20180909/brook_linux_arm6) | Server & Client | Linux | arm6 | CLI |
-| [brook_linux_arm7](https://github.com/txthinking/brook/releases/download/v20180909/brook_linux_arm7) | Server & Client | Linux | arm7 | CLI |
-| [brook_linux_mips](https://github.com/txthinking/brook/releases/download/v20180909/brook_linux_mips) | Server & Client | Linux | mips | CLI |
-| [brook_linux_mipsle](https://github.com/txthinking/brook/releases/download/v20180909/brook_linux_mipsle) | Server & Client | Linux | mipsle | CLI |
-| [brook_linux_mips64](https://github.com/txthinking/brook/releases/download/v20180909/brook_linux_mips64) | Server & Client | Linux | mips64 | CLI |
-| [brook_linux_mips64le](https://github.com/txthinking/brook/releases/download/v20180909/brook_linux_mips64le) | Server & Client | Linux | mips64le | CLI |
-| [brook_linux_ppc64](https://github.com/txthinking/brook/releases/download/v20180909/brook_linux_ppc64) | Server & Client | Linux | ppc64 | CLI |
-| [brook_linux_ppc64le](https://github.com/txthinking/brook/releases/download/v20180909/brook_linux_ppc64le) | Server & Client | Linux | ppc64le | CLI |
-| [brook_darwin_amd64](https://github.com/txthinking/brook/releases/download/v20180909/brook_darwin_amd64) | Server & Client | MacOS | amd64 | CLI |
-| [brook_windows_amd64.exe](https://github.com/txthinking/brook/releases/download/v20180909/brook_windows_amd64.exe) | Server & Client | Windows | amd64 | CLI |
-| [brook_windows_386.exe](https://github.com/txthinking/brook/releases/download/v20180909/brook_windows_386.exe) | Server & Client | Windows | 386 | CLI |
-| [Brook.dmg](https://github.com/txthinking/brook/releases/download/v20180909/Brook.dmg) | Client | MacOS | amd64 | GUI |
-| [Brook.Setup.exe](https://github.com/txthinking/brook/releases/download/v20180909/Brook.Setup.exe) | Client | Windows | amd64 | GUI |
+| [brook](https://github.com/txthinking/brook/releases/download/v20181212/brook) | Server & Client | Linux | amd64 | CLI |
+| [brook_linux_386](https://github.com/txthinking/brook/releases/download/v20181212/brook_linux_386) | Server & Client | Linux | 386 | CLI |
+| [brook_linux_arm64](https://github.com/txthinking/brook/releases/download/v20181212/brook_linux_arm64) | Server & Client | Linux | arm64 | CLI |
+| [brook_linux_arm5](https://github.com/txthinking/brook/releases/download/v20181212/brook_linux_arm5) | Server & Client | Linux | arm5 | CLI |
+| [brook_linux_arm6](https://github.com/txthinking/brook/releases/download/v20181212/brook_linux_arm6) | Server & Client | Linux | arm6 | CLI |
+| [brook_linux_arm7](https://github.com/txthinking/brook/releases/download/v20181212/brook_linux_arm7) | Server & Client | Linux | arm7 | CLI |
+| [brook_linux_mips](https://github.com/txthinking/brook/releases/download/v20181212/brook_linux_mips) | Server & Client | Linux | mips | CLI |
+| [brook_linux_mipsle](https://github.com/txthinking/brook/releases/download/v20181212/brook_linux_mipsle) | Server & Client | Linux | mipsle | CLI |
+| [brook_linux_mips64](https://github.com/txthinking/brook/releases/download/v20181212/brook_linux_mips64) | Server & Client | Linux | mips64 | CLI |
+| [brook_linux_mips64le](https://github.com/txthinking/brook/releases/download/v20181212/brook_linux_mips64le) | Server & Client | Linux | mips64le | CLI |
+| [brook_linux_ppc64](https://github.com/txthinking/brook/releases/download/v20181212/brook_linux_ppc64) | Server & Client | Linux | ppc64 | CLI |
+| [brook_linux_ppc64le](https://github.com/txthinking/brook/releases/download/v20181212/brook_linux_ppc64le) | Server & Client | Linux | ppc64le | CLI |
+| [brook_darwin_amd64](https://github.com/txthinking/brook/releases/download/v20181212/brook_darwin_amd64) | Server & Client | MacOS | amd64 | CLI |
+| [brook_windows_amd64.exe](https://github.com/txthinking/brook/releases/download/v20181212/brook_windows_amd64.exe) | Server & Client | Windows | amd64 | CLI |
+| [brook_windows_386.exe](https://github.com/txthinking/brook/releases/download/v20181212/brook_windows_386.exe) | Server & Client | Windows | 386 | CLI |
+| [Brook.dmg](https://github.com/txthinking/brook/releases/download/v20181212/Brook.dmg) | Client | MacOS | amd64 | GUI |
+| [Brook.exe](https://github.com/txthinking/brook/releases/download/v20181212/Brook.exe) | Client | Windows | amd64 | GUI |
 | [App Store](https://itunes.apple.com/us/app/brook-brook-shadowsocks-vpn-proxy/id1216002642) | Client | iOS | - | GUI |
-| [Brook.apk](https://github.com/txthinking/brook/releases/download/v20180909/Brook.apk)(No Google Play) | Client | Android | - | GUI |
+| [Brook.apk](https://github.com/txthinking/brook/releases/download/v20181212/Brook.apk)(No Google Play) | Client | Android | - | GUI |
 
 **See [wiki](https://github.com/txthinking/brook/wiki) for more tutorials**
 
@@ -87,31 +89,28 @@ USAGE:
    brook [global options] command [command options] [arguments...]
 
 VERSION:
-   20180909
+   20181212
 
 AUTHOR:
    Cloud <cloud@txthinking.com>
 
 COMMANDS:
-     server         Run as server mode
-     servers        Run as multiple servers mode
-     client         Run as client mode
-     tunnel         Run as tunnel mode
-     tproxy         Run as tproxy mode, transparent proxy, only works on Linux
-     vpn            Run as VPN mode
-     streamserver   Run as server mode
-     streamservers  Run as multiple servers mode
-     streamclient   Run as client mode
-     ssserver       Run as shadowsocks server mode, fixed method is aes-256-cfb
-     ssservers      Run as shadowsocks multiple servers mode, fixed method is aes-256-cfb
-     ssclient       Run as shadowsocks client mode, fixed method is aes-256-cfb
-     socks5         Run as raw socks5 server
-     relay          Run as relay mode
-     relays         Run as multiple relays mode
-     qr             Print brook server QR code
-     socks5tohttp   Convert socks5 to http proxy
-     systemproxy    Set system proxy with pac url, or remove, only works on MacOS/Windows
-     help, h        Shows a list of commands or help for one command
+     server        Run as server mode
+     servers       Run as multiple servers mode
+     client        Run as client mode
+     tunnel        Run as tunnel mode on client-side
+     tproxy        Run as tproxy mode on client-side, transparent proxy, only works on Linux
+     vpn           Run as VPN mode on client-side
+     ssserver      Run as shadowsocks server mode, fixed method is aes-256-cfb
+     ssservers     Run as shadowsocks multiple servers mode, fixed method is aes-256-cfb
+     ssclient      Run as shadowsocks client mode, fixed method is aes-256-cfb
+     socks5        Run as raw socks5 server
+     relay         Run as relay mode
+     relays        Run as multiple relays mode
+     qr            Print brook server QR code
+     socks5tohttp  Convert socks5 to http proxy
+     systemproxy   Set system proxy with pac url, or remove, only works on MacOS/Windows
+     help, h       Shows a list of commands or help for one command
 
 GLOBAL OPTIONS:
    --debug, -d               Enable debug

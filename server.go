@@ -1,14 +1,12 @@
 package brook
 
 import (
-	"encoding/binary"
 	"io"
 	"log"
 	"net"
 	"time"
 
 	cache "github.com/patrickmn/go-cache"
-	"github.com/txthinking/brook/plugin"
 	"github.com/txthinking/socks5"
 )
 
@@ -23,7 +21,6 @@ type Server struct {
 	TCPDeadline  int
 	TCPTimeout   int
 	UDPDeadline  int
-	TokenChecker plugin.TokenChecker
 }
 
 // NewServer
@@ -36,7 +33,7 @@ func NewServer(addr, password string, tcpTimeout, tcpDeadline, udpDeadline int) 
 	if err != nil {
 		return nil, err
 	}
-	cs := cache.New(60*time.Minute, 10*time.Minute)
+	cs := cache.New(cache.NoExpiration, cache.NoExpiration)
 	s := &Server{
 		Password:     []byte(password),
 		TCPAddr:      taddr,
@@ -47,11 +44,6 @@ func NewServer(addr, password string, tcpTimeout, tcpDeadline, udpDeadline int) 
 		UDPDeadline:  udpDeadline,
 	}
 	return s, nil
-}
-
-// SetToken set token plugin
-func (s *Server) SetTokenChecker(token plugin.TokenChecker) {
-	s.TokenChecker = token
 }
 
 // Run server
@@ -140,14 +132,6 @@ func (s *Server) TCPHandle(c *net.TCPConn) error {
 	if err != nil {
 		return err
 	}
-	if s.TokenChecker != nil {
-		l := int(binary.BigEndian.Uint16(b[0:2]))
-		t := b[2 : l+2]
-		if err := s.TokenChecker.Check(t); err != nil {
-			return err
-		}
-		b = b[l+2:]
-	}
 	address := socks5.ToAddress(b[0], b[1:len(b)-2], b[len(b)-2:])
 	tmp, err := Dial.Dial("tcp", address)
 	if err != nil {
@@ -212,7 +196,7 @@ func (s *Server) TCPHandle(c *net.TCPConn) error {
 
 // UDPHandle handle packet
 func (s *Server) UDPHandle(addr *net.UDPAddr, b []byte) error {
-	a, h, p, data, err := Decrypt(s.Password, b, s.TokenChecker)
+	a, h, p, data, err := Decrypt(s.Password, b)
 	if err != nil {
 		return err
 	}
@@ -241,10 +225,11 @@ func (s *Server) UDPHandle(addr *net.UDPAddr, b []byte) error {
 		ClientAddr: addr,
 		RemoteConn: rc,
 	}
-	s.UDPExchanges.Set(ue.ClientAddr.String(), ue, cache.DefaultExpiration)
 	if err := send(ue, data); err != nil {
+		ue.RemoteConn.Close()
 		return err
 	}
+	s.UDPExchanges.Set(ue.ClientAddr.String(), ue, cache.DefaultExpiration)
 	go func(ue *socks5.UDPExchange) {
 		defer func() {
 			s.UDPExchanges.Delete(ue.ClientAddr.String())
